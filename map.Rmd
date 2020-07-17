@@ -1,0 +1,30 @@
+## Dr R Mofidi 
+### Vascular Surgeon
+### Office Location and Hospital Practice
+
+```{r, echo=FALSE} 
+library(leaflet)
+RM_Practice_lat_lng <- data.frame (
+  lat = c(54.5515, 54.5520, 54.7024),
+  lng = c( -1.211, -1.2140, -1.2276))
+rm_site = c(
+  "<a href='http://rezamofidi.com/index.html'>Reza Mofidi<a/>", 
+  "<a href='https://www.southtees.nhs.uk/hospitals/james-cook/'>James Cook Hospital<a/>",
+  "<a href='https://www.nth.nhs.uk/'> Hartlepool Hospital<a/>")
+  
+RM_Practice_lat_lng %>% leaflet() %>% addTiles() %>% addMarkers( popup= rm_site)
+RM_Practice_lat_lng
+```
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
